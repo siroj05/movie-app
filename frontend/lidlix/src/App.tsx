@@ -1,10 +1,13 @@
+import RootLayout from "./pages/layout"
+import LoginUser from "./pages/login/login"
+
 function App() {
 
   return (
     <>
-    <div className='px-2'>
-      <h1 className='text-red-600'>MAS ANIS MAS ANIS</h1>
-    </div>
+      <RootLayout>
+        <LoginUser/>
+      </RootLayout>
     </>
   )
 }
