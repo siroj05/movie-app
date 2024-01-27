@@ -1,15 +1,13 @@
-import RootLayout from "./pages/layout"
-import LoginUser from "./pages/login/login"
+import React from 'react';
+import AppRoutes from './routes/appRoutes';
+import { BrowserRouter as Router } from 'react-router-dom';
 
-function App() {
-
+const App: React.FC = () => {
   return (
-    <>
-      <RootLayout>
-        <LoginUser/>
-      </RootLayout>
-    </>
-  )
-}
+    <Router>
+      <AppRoutes />
+    </Router>
+  );
+};
 
-export default App
+export default App;
