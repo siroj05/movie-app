@@ -10,7 +10,7 @@ const allRoutes = () => {
       element: <LoginPage />,
     },
     {
-      path: '/home',
+      path: '/',
       exact: true,
       element: <HomePage />,
     },
