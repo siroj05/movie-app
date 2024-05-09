@@ -27,8 +27,9 @@ export default function MainNavbar() {
                   <span className="badge">New</span>
                 </a>
               </li>
-              <li><a>Settings</a></li>
-              <li><a>Logout</a></li>
+              <li><a>Keranjang</a></li>
+              <li><a>Wishlist</a></li>
+              <li><a>Keluar</a></li>
             </ul>
           </div>
         </div>
