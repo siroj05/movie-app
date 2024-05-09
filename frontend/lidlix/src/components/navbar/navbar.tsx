@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CollapseProfile from './collapse-profile';
 export default function MainNavbar() {
 
   return (
@@ -20,16 +20,8 @@ export default function MainNavbar() {
                 <img alt="" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
               </div>
             </div>
-            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-              <li><a>Keranjang</a></li>
-              <li><a>Wishlist</a></li>
-              <li><a>Keluar</a></li>
+            <ul tabIndex={0} className=" z-[1] shadow menu menu-md rounded dropdown-content bg-indigo-950 w-96">
+              <CollapseProfile/>
             </ul>
           </div>
         </div>

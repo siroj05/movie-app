@@ -1,11 +1,11 @@
 import React from 'react';
 import Home from './home';
-import { HomeLayout } from '../../layout/homeLayout';
+import MainLayout from '../../layout/main-layout';
 
 export const HomePage = () => {
   return (
-    <HomeLayout>
+    <MainLayout>
       <Home />
-    </HomeLayout>
+    </MainLayout>
   );
 };

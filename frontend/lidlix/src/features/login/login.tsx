@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import LoginApi from './login-api';
 import { useNavigate } from 'react-router-dom';
+import {dbtest} from '../../../fireBaseConfig'
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs, setDoc } from 'firebase/firestore';
 
 const Login = () => {
   
@@ -15,9 +17,32 @@ const Login = () => {
     res = LoginApi(email, password);
     setMessage(res);
     if (res.isTrue) {
-      navigateTo('/home');
+      navigateTo('/');
     }
   };
+
+  // setDoc buat edit/update
+
+  const response = async () => {
+    // --------------UPDATE-----------------
+    // await setDoc(doc(dbtest, "user", "aRPK2bSN8hWBexrOp0Nl"),{
+    //   "firstName" : "jaenudin"
+    // })
+    // --------------CREATE----------------
+    // await addDoc(collection(dbtest,"user"),{
+    //   "firstName" : "ismed"
+    // })
+    // --------------READ BANYAK-----------
+    // const a = await getDocs(collection(dbtest, "user"))
+    // a.forEach((doc) => {
+    //   console.log(doc.data().firstName)
+    // })
+    // --------------DELETE-----------------
+    // await deleteDoc(doc(dbtest, "user", "iduser"))
+    // --------------READ DETAIL------------
+    // await getDoc(doc(dbtest, "user", "id nya"))
+  }
+
   return (
     <>
       <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
@@ -101,3 +126,4 @@ const Login = () => {
 };
 
 export default Login;
+

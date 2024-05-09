@@ -1,6 +1,7 @@
-import { HomePage } from '../pages/home/page';
-import { LoginPage } from '../pages/login/page';
+import { HomePage } from '../features/home/page';
+import { LoginPage } from '../features/login/page';
 import { Navigate, useRoutes } from 'react-router-dom';
+import Seller from '../features/seller/seller';
 
 const allRoutes = () => {
   const clientRoutes = [
@@ -13,6 +14,11 @@ const allRoutes = () => {
       path: '/',
       exact: true,
       element: <HomePage />,
+    },
+    {
+      path: '/seller',
+      exact: true,
+      element: <Seller />,
     },
   ];
 

@@ -7,17 +7,10 @@ const Home = () => {
   ));
   return (
     <>
-      <div>
-        <MainNavbar />
-      </div>
-      {/* main konten */}
-      {/* <div className='flex justify-center mt-12'> */}
-
+      <MainNavbar />
       <div className="p-8">
         <div className="grid grid-cols-4 gap-4">{cardItems}</div>
       </div>
-
-      {/* </div> */}
     </>
   );
 };
